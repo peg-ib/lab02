@@ -26,7 +26,7 @@ $ git commit -m "4th"
 
 $ git push origin master
 
-## Part 2.
+## PART 2.
 
 В локальной копии репозитория создайте локальную ветку patch1.
 Внесите изменения в ветке patch1 по исправлению кода и избавления от using namespace std;.
