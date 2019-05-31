@@ -5,7 +5,9 @@ PART 1.
 Создайте файл hello_world.cpp в локальной копии репозитория (который должен был появиться на шаге 2). Реализуйте программу Hello world на языке C++ используя плохой стиль кода. Например, после заголовочных файлов вставьте строку using namespace std;.
 
 $ cat > hello_world.cpp <<EOF
+
 $ git add .
+
 $ git commit -m "3rd"
 
 Добавьте этот файл в локальную копию репозитория.
@@ -16,8 +18,11 @@ $ git commit -m "3rd"
 Проверьте, что история коммитов доступна в удалёный репозитории.
 
 $ nano hello_world.cpp
+
 $ git add .
+
 $ git commit -m "4th"
+
 $ git push origin master
 
 Part 2.
@@ -25,9 +30,13 @@ Part 2.
 Внесите изменения в ветке patch1 по исправлению кода и избавления от using namespace std;.
 
 $ git checkout -b patch1
+
 $ nano hello_world.cpp
+
 $ git add .
+
 $ git commit -m "5th"
+
 $ git push origin patch1
 
 commit, push локальную ветку в удалённый репозиторий.
@@ -35,9 +44,12 @@ commit, push локальную ветку в удалённый репозит�
 Создайте pull-request patch1 -> master.
 В локальной копии в ветке patch1 добавьте в исходный код комментарии.
 
- $ nano hello_world.cpp
+$ nano hello_world.cpp
+ 
 $ git add .
+
 $ git commit -m "6th"
+
 $ git push origin patch1
 
 Проверьте, что новые изменения есть в созданном на шаге 5 pull-request
@@ -52,10 +64,15 @@ PART3
 Измените code style с помощью утилиты clang-format. Например, используя опцию -style=Mozilla.
 
 $ git checkout -b patch2
+
 $ brew install -g clang-format
+
 $ clang-format -i -style=Mozilla hello_world.cpp
+
 $ git add .
+
 $ git commit -m "7th" 
+
 $ git push origin patch2
 
 commit, push, создайте pull-request patch2 -> master.
@@ -66,13 +83,22 @@ commit, push, создайте pull-request patch2 -> master.
 Убедитель, что в pull-request пропали конфликтны.
 Вмержите pull-request patch2 -> master.
 $ git pull
+
 $ nano hello_world.cpp
+
 $ git add .
+
 $ git commit -m"8th"
+
 $ git rebase master
+
 $ nano hello_world.cpp
+
 $ git add .
+
 $ git rebase --continue
+
 $ git pull origin master
+
 $ git push -f origin patch2
 Убедитель, что в pull-request пропали конфликтны.
