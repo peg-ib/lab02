@@ -1,5 +1,5 @@
 # lab02
-PART 1.
+## PART 1.
 
 Создайте пустой репозиторий на сервисе github.com (или gitlab.com, или bitbucket.com).
 Выполните инструкцию по созданию первого коммита на странице репозитория, созданного на предыдещем шаге.
@@ -26,7 +26,7 @@ $ git commit -m "4th"
 
 $ git push origin master
 
-Part 2.
+## Part 2.
 
 В локальной копии репозитория создайте локальную ветку patch1.
 Внесите изменения в ветке patch1 по исправлению кода и избавления от using namespace std;.
@@ -60,14 +60,12 @@ $ git push origin patch1
 С помощью команды git log просмотрите историю в локальной версии ветки master.
 Удалите локальную ветку patch1.
 
-PART3.
+## PART3.
 
 Создайте новую локальную ветку patch2.
 Измените code style с помощью утилиты clang-format. Например, используя опцию -style=Mozilla.
 
 $ git checkout -b patch2
-
-$ brew install -g clang-format
 
 $ clang-format -i -style=Mozilla hello_world.cpp
 
